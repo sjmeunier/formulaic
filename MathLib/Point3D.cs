@@ -14,11 +14,11 @@ namespace MathLib
         {
         }
 
-        public Point3D(double dX, double dY, double dZ)
+        public Point3D(double x, double y, double z)
         {
-            X = dX;
-            Y = dY;
-            Z = dZ;
+            X = x;
+            Y = y;
+            Z = z;
         }
 
         public static double Abs(Point3D p1)
@@ -78,15 +78,14 @@ namespace MathLib
             return new Point3D(dX, dY, dZ);
         }
 
-        public static Point3D Scale(Point3D p, double dScale)
+        public static Point3D Scale(Point3D p, double scale)
         {
-            return new Point3D(p.X * dScale, p.Y * dScale, p.Z * dScale);
+            return new Point3D(p.X * scale, p.Y * scale, p.Z * scale);
         }
 
         public static double GetAngleBetween(Point3D p1, Point3D p2)
         {
-            double dAngle = Math.Acos(DotProduct(p1, p2));
-            return dAngle;
+            return Math.Acos(DotProduct(p1, p2));
         }
     }
 }

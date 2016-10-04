@@ -6,7 +6,7 @@ namespace MathLib
 {
     public class Matrix
     {
-        public double[,] val;
+        public double[,] Values;
         public int Cols;
         public int Rows;
 
@@ -14,15 +14,15 @@ namespace MathLib
         {
             Cols = X;
             Rows = Y;
-            val = new double[Rows, Cols];
+            Values = new double[Rows, Cols];
             Zero();
         }
 
-        public Matrix(double[,] dArray)
+        public Matrix(double[,] values)
         {
-            val = dArray;
-            Cols = val.GetLength(1);
-            Rows = val.GetLength(0);
+            Values = values;
+            Cols = Values.GetLength(1);
+            Rows = Values.GetLength(0);
         }
 
         public void Zero()
@@ -31,7 +31,7 @@ namespace MathLib
             {
                 for (int j = 0; j < Cols; j++)
                 {
-                    val[i, j] = 0;
+                    Values[i, j] = 0;
                 }
             }
         }
@@ -43,11 +43,11 @@ namespace MathLib
                 {
                     if (i == j)
                     {
-                        val[i, j] = 1;
+                        Values[i, j] = 1;
                     }
                     else
                     {
-                        val[i, j] = 0;
+                        Values[i, j] = 0;
                     }
                 }
             }
@@ -59,20 +59,20 @@ namespace MathLib
             {
                 for (int j = 0; j < Cols; j++)
                 {
-                    values[j, i] = val[i, j];
+                    values[j, i] = Values[i, j];
                 }
             }
             return new Matrix(values);
         }
 
-        public Matrix Scale(double dFactor)
+        public Matrix Scale(double factor)
         {
             double[,] values = new double[Rows, Cols];
             for (int i = 0; i < Rows; i++)
             {
                 for (int j = 0; j < Cols; j++)
                 {
-                    values[i, j] = dFactor * val[i, j];
+                    values[i, j] = factor * Values[i, j];
                 }
             }
             return new Matrix(values);
@@ -80,36 +80,36 @@ namespace MathLib
 
         public double Determinant()
         {
-            double dDet = 0;
+            double determinant = 0;
             int colIndex = 0;
-            double dVal = 1;
+            double value = 1;
             int k;
             for (int i = 0; i < Cols; i++)
             {
                 k = 0;
-                dVal = 1;
+                value = 1;
                 for (int j = 0; j < Cols; j++)
                 {
                     colIndex = (i + j) % 3;
-                    dVal *= val[colIndex, k];
+                    value *= Values[colIndex, k];
                     k++;
                 }
-                dDet += dVal;
+                determinant += value;
             }
             for (int i = 0; i < Cols; i++)
             {
                 k = 0;
-                dVal = 1;
+                value = 1;
                 for (int j = Cols-1; j >= 0; j--)
                 {
                     colIndex = (i + j) % 3;
-                    dVal *= val[colIndex, k];
+                    value *= Values[colIndex, k];
                     k++;
                 }
-                dDet -= dVal;
+                determinant -= value;
             }
 
-            return dDet;
+            return determinant;
         }
         public double Trace()
         {
@@ -117,13 +117,13 @@ namespace MathLib
             {
                 return 0;
             }
-            double dTrace = 0;
+            double trace = 0;
             for (int i = 0; i < Rows; i++)
             {
 
-               dTrace += val[i, i];
+               trace += Values[i, i];
             }
-            return dTrace;            
+            return trace;            
         }
 
         public override string ToString()
@@ -133,7 +133,7 @@ namespace MathLib
             {
                 for (int j = 0; j < Cols; j++)
                 {
-                    sStr += val[i, j].ToString() + ",";
+                    sStr += Values[i, j].ToString() + ",";
                 }
                 sStr += Environment.NewLine;
             }
@@ -152,7 +152,7 @@ namespace MathLib
             {
                 for (int j = 0; j < left.Cols; j++)
                 {
-                    values[i,j] = left.val[i,j] + right.val[i,j];
+                    values[i,j] = left.Values[i,j] + right.Values[i,j];
                 }
             }
             return (new Matrix(values));
@@ -166,7 +166,7 @@ namespace MathLib
             {
                 for (int j = 0; j < right.Cols; j++)
                 {
-                    values[i, j] = left + right.val[i, j];
+                    values[i, j] = left + right.Values[i, j];
                 }
             }
             return (new Matrix(values));
@@ -184,7 +184,7 @@ namespace MathLib
             {
                 for (int j = 0; j < left.Cols; j++)
                 {
-                    values[i, j] = left.val[i, j] - right.val[i, j];
+                    values[i, j] = left.Values[i, j] - right.Values[i, j];
                 }
             }
             return (new Matrix(values));
@@ -200,7 +200,7 @@ namespace MathLib
                 {
                     for (int j = 0; j < left.Cols; j++)
                     {
-                            values[h, i] += left.val[h, j] * right.val[j, i];
+                            values[h, i] += left.Values[h, j] * right.Values[j, i];
                     }
                 }
             }

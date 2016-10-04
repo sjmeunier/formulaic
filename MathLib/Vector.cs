@@ -6,19 +6,19 @@ namespace MathLib
 {
     public class Vector
     {
-        public double[] val;
+        public double[] Components;
         public int Dimension;
 
         public Vector(double[] Values)
         {
-            val = Values;
-            Dimension = val.GetLength(0);
+            Components = Values;
+            Dimension = Components.GetLength(0);
         }
 
-        public Vector(int iDim)
+        public Vector(int dimension)
         {
-            val = new double[iDim];
-            Dimension = iDim;
+            Components = new double[dimension];
+            Dimension = dimension;
             Zero();
         }
 
@@ -27,42 +27,43 @@ namespace MathLib
         {
             for(int i = 0; i < Dimension; i++)
             {
-                val[i] = 0;
+                Components[i] = 0;
             }
         }
 
         public double Abs()
         {
-            double dAbs = 0;
+            double abs = 0;
 
             for (int i = 0; i < Dimension; i++)
             {
-                dAbs += val[i] * val[i];
+                abs += Components[i] * Components[i];
             }
-            return Math.Sqrt(dAbs);
+            return Math.Sqrt(abs);
         }
 
-        public double Dot(Vector oVec)
+        public double Dot(Vector vector)
         {
-            if (oVec.Dimension != Dimension)
+            if (vector.Dimension != Dimension)
             {
                 return 0;
             }
-            double dDotProd = 0;
+
+            double dotProduct = 0;
             for (int i = 0; i < Dimension; i++)
             {
-                dDotProd += val[i] * oVec.val[i];
+                dotProduct += Components[i] * vector.Components[i];
             }
-            return dDotProd;
+            return dotProduct;
         }
 
-        public Vector Scale(double dFactor)
+        public Vector Scale(double factor)
         {
             double[] values = new double[Dimension];
 
             for (int i = 0; i < Dimension; i++)
             {
-                values[i] = val[i] * dFactor;
+                values[i] = Components[i] * factor;
             }
             return new Vector(values);
         }
@@ -76,7 +77,7 @@ namespace MathLib
                 {
                     sStr += ", ";
                 }
-                sStr += val[i];
+                sStr += Components[i];
             }
             return "(" + sStr + ")";
         }
@@ -92,7 +93,7 @@ namespace MathLib
 
             for (int i = 0; i < left.Dimension; i++)
             {
-                values[i] = left.val[i] + right.val[i];
+                values[i] = left.Components[i] + right.Components[i];
             }
             return (new Vector(values));
         }
@@ -107,7 +108,7 @@ namespace MathLib
 
             for (int i = 0; i < left.Dimension; i++)
             {
-                values[i] = left.val[i] - right.val[i];
+                values[i] = left.Components[i] - right.Components[i];
             }
             return (new Vector(values));
         }
