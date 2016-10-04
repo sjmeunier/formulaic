@@ -53,3 +53,6 @@ The following are implemented in the library:
 
 * Degree versions of Sin, Cos, Tan, Cosec, Sec, Cot, Acos, Asin, Atan, Cosh, Sinh, Tanh, Cosech, Sech, Coth
 
+## Nuget
+
+This library is available as a Nuget package at www.nuget.org/packages/Meunier.MathLib/1.0.0
