@@ -35,31 +35,30 @@ namespace MathLib
         //Calculate of the greatest common divisor of two numbers
         public static int GreatestCommonDivisor(int a, int b)
         {
-            if (a == b)
+            if (a <= 0 || b <= 0)
+                throw new Exception("Parameters need to be greater than 0");
+            int d = 0;
+            while ((a % 2 == 0) && (b % 2 == 0))
             {
-                return a;
-            }
-            if ((a == 1) || (b == 1))
-            {
-                return 1;
-            }
-            if ((a % 2 == 0) && (b % 2 == 0))
-            {
-                return 2 * GreatestCommonDivisor(a / 2, b / 2);
-            }
-            else if ((a % 2 == 0) && (b % 2 != 0))
-            {
-                return GreatestCommonDivisor(a / 2, b);
-            }
-            else if ((a % 2 != 0) && (b % 2 == 0))
-            {
-                return GreatestCommonDivisor(a, b / 2);
-            }
-            else
-            {
-                return GreatestCommonDivisor(Math.Abs(a - b) / 2, b);
+                a = a / 2;
+                b = b / 2;
+                d += 1;
             }
 
+            while (a != b)
+            {
+                if (a % 2 == 0)
+                    a = a / 2;
+                else if (b % 2 == 0)
+                    b = b / 2;
+                else if (a > b)
+                    a = (a - b) / 2;
+                else
+                    b = (b - a) / 2;
+            }
+            int gcd = a * ((int)Math.Pow(2, d));
+
+            return gcd;
         }
 
         //Calculate a list of all the prime factors of a number

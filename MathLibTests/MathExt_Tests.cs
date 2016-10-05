@@ -32,8 +32,7 @@ namespace MathLibTests
         [TestMethod]
         public void GreatestCommonDivisor()
         {
-            // var result = MathExt.GreatestCommonDivisor(9, 21);
-            var result = 1; //Breaking test
+            var result = MathExt.GreatestCommonDivisor(9, 21);
             Assert.AreEqual(3, result);
         }
 
