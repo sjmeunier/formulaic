@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Meunier.Formulaic</PackageId>
+    <Authors>Serge Meunier</Authors>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <Company>Serge Meunier</Company>
+    <Description>Formulaic is a mathematical library written in C#</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="Maths\Matrix.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

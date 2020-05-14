@@ -1,11 +1,13 @@
-# mathlib
-MathLib is a mathematical library written in C#
+# formulaic
+Formulaic is a mathematical library written in C#
 
 ## About
 
 The following are implemented in the library:
 
-### General
+### Maths
+
+#### General
 
 * Complex numbers
 * Vectors
@@ -20,17 +22,30 @@ The following are implemented in the library:
 * Arbitrary roots
 * Inverse of a number
 
-### Algebraical
+#### Algebraical
 
 * Solving quadratic equations
 
+#### Geometry
+
+* Area of circle, square, rectange, triangle and circle segment
+* Volume of cube, cylinder, sphere, rectangular block and cone
+* Circumference of circle
+* Perimeter of square and rectange
+* Surface area of cube, sphere and rectangular block
+
+#### Trigonometry
+
+* Degree versions of Sin, Cos, Tan, Cosec, Sec, Cot, Acos, Asin, Atan, Cosh, Sinh, Tanh, Cosech, Sech, Coth
+
 ### Data Analysis
 
+#### Series
 * Finding the geometric mean, arithmetic mean and median
 * Standard Deviation
 * Variance
 
-### Interpolation
+#### Interpolation
 
 * Linear and Log Least Squares Fit 
 * Linear Interpolation
@@ -41,18 +56,8 @@ The following are implemented in the library:
 * Compound and simple interest
 * Compound and simple depreciation
 
-### Geometry
 
-* Area of circle, square, rectange, triangle and circle segment
-* Volume of cube, cylinder, sphere, rectangular block and cone
-* Circumference of circle
-* Perimeter of square and rectange
-* Surface area of cube, sphere and rectangular block
-
-### Trigonometry
-
-* Degree versions of Sin, Cos, Tan, Cosec, Sec, Cot, Acos, Asin, Atan, Cosh, Sinh, Tanh, Cosech, Sech, Coth
 
 ## Nuget
 
-This library is available as a Nuget package at www.nuget.org/packages/Meunier.MathLib/1.0.0
+This library is available as a Nuget package at www.nuget.org/packages/Meunier.Formulaic/1.0.0

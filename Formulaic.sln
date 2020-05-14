@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Formulaic", "Formulaic\Formulaic.csproj", "{EBB67B6C-D318-4505-A1A0-F31FC830ADA8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormulaicTests", "FormulaicTests\FormulaicTests.csproj", "{743225D9-6A69-433B-9E51-AAA01A701581}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBB67B6C-D318-4505-A1A0-F31FC830ADA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBB67B6C-D318-4505-A1A0-F31FC830ADA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBB67B6C-D318-4505-A1A0-F31FC830ADA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBB67B6C-D318-4505-A1A0-F31FC830ADA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{743225D9-6A69-433B-9E51-AAA01A701581}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{743225D9-6A69-433B-9E51-AAA01A701581}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{743225D9-6A69-433B-9E51-AAA01A701581}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{743225D9-6A69-433B-9E51-AAA01A701581}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9EE26959-2E09-457B-ACA1-55DB6FE65058}
+	EndGlobalSection
+EndGlobal
