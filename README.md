@@ -1,5 +1,6 @@
 # formulaic
-Formulaic is a mathematical library written in C#
+Formulaic is a mathematical and scientific library written in C#.
+
 
 ## About
 
@@ -56,7 +57,20 @@ The following are implemented in the library:
 * Compound and simple interest
 * Compound and simple depreciation
 
+### Geodesy
 
+* Haversine formula for calculating distances between geographic coordinates
+
+### Electronics
+
+#### Resistance
+
+* Total resistance
+* Closes standard resistor
+
+#### Transformer
+
+* Turn ratio for a transformer
 
 ## Nuget
 

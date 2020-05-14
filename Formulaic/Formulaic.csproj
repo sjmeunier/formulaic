@@ -7,7 +7,8 @@
     <Authors>Serge Meunier</Authors>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <Company>Serge Meunier</Company>
-    <Description>Formulaic is a mathematical library written in C#</Description>
+    <Description>Formulaic is a mathematical and scientific library written in C#.</Description>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
