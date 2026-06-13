@@ -1,3 +1,6 @@
+## Depreciated
+This repo is now deprecated and has moved to my private Git server [https://git.magna-ursa.com/sjmeunier/formulaic](https://git.magna-ursa.com/sjmeunier/formulaic).
+
 # formulaic
 Formulaic is a mathematical and scientific library written in C#.
 
